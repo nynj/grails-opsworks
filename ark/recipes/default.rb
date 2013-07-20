@@ -21,5 +21,8 @@
 package "unzip"
 package "libtool"
 package "autoconf"
-package "autogen" if platform_family?("debian")
-package "gtar" if platform?("freebsd")
+#'platform_family?' incompatible w chef version 0.9 on Opsworks
+#package "autogen" if platform_family?("debian")
+package "autogen"
+
+#package "gtar" if platform?("freebsd")
